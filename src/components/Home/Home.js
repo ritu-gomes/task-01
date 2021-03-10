@@ -10,8 +10,8 @@ const Home = () => {
     const [grapes, setGrapes] = useState(10)
     const [fruitColor, setFruitColor] = useState(0);
     const [busketStack, setBusketStack] = useState([]);
-    const addToBusket = (color) => {
-        if (pass === "admin") {
+    const addToBusket = (color,count) => {
+        if (pass === "admin" && Number(count) > 0) {
             if (color === "primary") {
                 setApple(apple - 1)
             }
@@ -56,7 +56,7 @@ const Home = () => {
                     <div>{apple}</div>
                     <div className="row d-flex justify-content-around mt-3">
                         <div className="col-6">
-                            <button onClick={() => addToBusket("primary")} className="btn btn-light">+</button>
+                            <button onClick={() => addToBusket("primary",`${apple}`)} className="btn btn-light">+</button>
                         </div>
                         <div className="col-6">
                             <button onClick={() => emptyBusket("primary")} className="btn btn-light">-</button>
@@ -69,7 +69,7 @@ const Home = () => {
                     <div>{orange}</div>
                     <div className="row d-flex justify-content-around mt-3">
                         <div className="col-6">
-                            <button onClick={() => addToBusket("secondary")} className="btn btn-light">+</button>
+                            <button onClick={() => addToBusket("secondary",`${orange}`)} className="btn btn-light">+</button>
                         </div>
                         <div className="col-6">
                             <button onClick={() => emptyBusket("secondary")} className="btn btn-light">-</button>
@@ -81,7 +81,7 @@ const Home = () => {
                     <div>{grapes}</div>
                     <div className="row d-flex justify-content-around mt-3">
                         <div className="col-6">
-                            <button onClick={() => addToBusket("warning")} className="btn btn-light">+</button>
+                            <button onClick={() => addToBusket("warning",`${grapes}`)} className="btn btn-light">+</button>
                         </div>
                         <div className="col-6">
                             <button onClick={() => emptyBusket("warning")} className="btn btn-light">-</button>

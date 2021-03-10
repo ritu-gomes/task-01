@@ -3,7 +3,7 @@ import React from 'react';
 const FruitStack = ({color}) => {
     return (
         <>
-            <div className={`busket p-2 bg-${color}`}></div>
+            <div className={`busket mt-1 px-1 bg-${color}`}></div>
         </>
     );
 };
