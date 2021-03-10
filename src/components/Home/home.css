@@ -1,0 +1,14 @@
+.home .col-3,
+.home .col-5{
+    height: 300px;
+    font-weight: bold;
+    font-size: large;
+}
+.home .btn{
+    border-radius: 50%;
+    font-weight: bolder;
+}
+.home .busket{
+    height: 5px;
+    border: 1px solid black;
+}
